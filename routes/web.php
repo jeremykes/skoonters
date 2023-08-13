@@ -1,6 +1,9 @@
 <?php
 
+use App\Livewire\Blog;
 use App\Livewire\Home;
+use App\Livewire\TermsConditions;
+use App\Livewire\Unsubscribe;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/home', Home::class);
+Route::get('/', Home::class);
+Route::get('/blog', Blog::class);
+Route::get('/terms-conditions', TermsConditions::class);
+Route::get('/unsubscribe', Unsubscribe::class);
